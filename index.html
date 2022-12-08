@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banking app</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    </head>
+    <body>
+        <nav>
+            <h2 class="brand">Dummy Bank </h2>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="username" placeholder="Username" />
+                </div>
+                <div class="col">
+                    <input type="text" id="password" placeholder="Password" />
+                </div>
+                <div class="col">
+                    <button type="submit" id="login_button">Login</button>
+                </div>
+            </div>
+        </nav>
+
+        <small class="last-updated"></small>
+        <section>
+            <div class="passbook-section unavailable">
+                
+            </div>
+            <div class="action-section">
+                <form action="" id="deposit_form">
+                    <label for="">Deposit amount</label>
+                    <input type="text" placeholder="Amount" id="deposit_input" disabled/>
+                    <button type="submit" id="deposit_button" disabled>Deposit</button>
+                </form>
+                <form action="" id="withdraw_form">
+                    <label for="">Withdraw amount</label>
+                    <small class="unauthorized_transaction">Transaction cannot take place!!!</small>
+                    <input type="text" placeholder="Amount" id="withdraw_input" disabled/>
+                    <button type="submit" id="withdraw_button" disabled>Withdraw</button>
+                </form>
+            </div>
+        </section>
+
+        <span class="message-box">
+            <span class="message-text"></span>
+            <span class="close">x</span>
+        </span>
+
+        <p style="text-align: center; width: 100%;">&hearts; Made by Saurabh Panchal, Copyright &copy; 2022</p>
+
+        <script src="script.js"></script>
+    </body>
+</html>

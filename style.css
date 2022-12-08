@@ -1,0 +1,113 @@
+body{
+    font-family: Poppins, 'sans-serif';
+}
+
+.brand::before{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 105px;
+    margin-left: -5px;
+    z-index: -9999;
+    background-color:sandybrown;
+    transform: skew(-10deg);
+}
+
+nav, nav .row, section{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav input, nav button{
+    font-family: inherit;
+    text-align: center;
+    margin: 0 20px;
+    transition: all 0.3s;
+}
+
+.passbook-section, .action-section{
+    border: solid 1px grey;
+    width: 100%; 
+    margin-right: 50px;
+    padding: 50px; 
+    max-height: 300px;
+    overflow-y: auto;
+    align-self: stretch;
+    transition: 0.5s;
+}
+
+.available{
+    visibility: visible;
+    transition: none;
+}
+
+.unavailable{
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.action-section form{
+    margin-bottom: 2rem; 
+}
+
+.action-section form input{
+    display: block;
+    width: 50%;
+    margin: 10px 0;
+    padding: 0.5rem 1rem;
+    font-family: inherit; 
+}
+
+.passbook-section div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-bottom: solid 1px grey;
+    padding-bottom: 1rem;
+}
+
+.withdrawn_amount{
+    background-color: crimson;
+    border-radius: 5px;
+    color: white;
+    padding: 0 1rem;
+}
+
+.deposit_amount{
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    padding: 0 1rem;
+}
+
+.message-box{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9999;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 1px 1px 3px 1px grey;
+    display: none;
+    transition: 0.5s;
+}
+
+.close{
+    margin-left: 10px;
+    padding: 5px 12px;
+    border: solid 0.5px grey;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color:royalblue;
+    color: white;
+}
+
+.unauthorized_transaction{
+    display: none;
+    color: crimson;
+}
