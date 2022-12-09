@@ -1,1 +1,5 @@
-This project contains all JavaScript Projects
+Banking app has the basic functionality of -
+1. login
+2. listing all transactions of user - deposit, withdrawal
+3. Depositing amount
+4. Withdrawing amount 
