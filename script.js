@@ -1,5 +1,9 @@
 'use strict'
 
+const username = document.querySelector('#username');
+const password = document.querySelector('#password');
+const floatingBackground = document.querySelector('.inputs-background');
+
 let users = [
     {
         name: 'Saurabh Panchal',
@@ -165,6 +169,28 @@ login.addEventListener('click', ()=>{
     updateUI(user);
 })
 
+const showFloatingBack = function(e){
+    const userCoord = e.target.getBoundingClientRect();
+    
+    //setting initial position of floating background 
+    floatingBackground.style.visibility = 'visible';
+    floatingBackground.style.height = (userCoord.height + 15) + 'px';
+    floatingBackground.style.width = (userCoord.width + 15) + 'px';
+    floatingBackground.style.left = (userCoord.x - floatingBackground.closest('.row').getBoundingClientRect().x - 5) + 'px';
+}
+
+const hideFloatingBack = function(){
+    floatingBackground.style.visibility = 'hidden';
+}
+
+username.addEventListener('focus', showFloatingBack.bind());
+password.addEventListener('focus', showFloatingBack.bind());
+
+username.addEventListener('blur', hideFloatingBack);
+password.addEventListener('blur', hideFloatingBack);
+
 document.querySelector('.close').addEventListener('click', (e) =>{
     e.target.parentElement.style.display = 'none';
 })
+
+

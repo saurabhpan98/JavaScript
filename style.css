@@ -20,11 +20,43 @@ nav, nav .row, section{
     justify-content: space-around;
 }
 
+nav .row{
+    position: relative;
+}
+
 nav input, nav button{
     font-family: inherit;
     text-align: center;
     margin: 0 20px;
     transition: all 0.3s;
+}
+
+nav input{
+    outline: none;
+    border: solid 1px white;
+    background-color: rgba(0,0,0,0);
+}
+
+nav button{
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
 
 .passbook-section, .action-section{
@@ -110,4 +142,14 @@ nav input, nav button{
 .unauthorized_transaction{
     display: none;
     color: crimson;
+}
+
+.inputs-background{
+    position: absolute;
+    left: 50px;
+    z-index: -9999;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+    visibility: hidden;
+    transition: 0.5s;
 }
